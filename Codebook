@@ -1,0 +1,47 @@
+#This is a codebook for the getting and cleaning data course project
+
+##Merge the training and the test sets to create one data set.
+
+## Download zip file from website
+
+## Unzip data
+
+##load data into R
+
+The training data is loaded as "train.x" for X_train.txt fle in subfolder train and training labels as "train.y" for Y_train.txt file in same subfolder.
+
+The training subject data is loaded as "train.subject" for subject_train.txt file
+
+The testing data is loaded as "test.x" for X_test.txt file in subfolder test and test labels as test.y for Y_test.txt file in the same subfolder.
+
+The test subject data is loaded as "test.subject" for subject_test.txt file
+
+## merge train and test data
+
+At first we merge train.subject, train.y, train.x using cbind into "trainData". 
+
+Then merge test.subject, test.y, test.x using cbind into "testData". 
+
+Using rbind function to merge trainData, testData into "fullData".
+
+# Extract only the measurements on the mean and standard deviation for each measurement. 
+
+##load feature name into R
+
+Load feature names as variable featureName.
+
+##extract mean and standard deviation of each measurements
+
+Choose feature names with mean or sd as variable featureIndex.
+
+The finalData is subset of fullData of column 1, 2, and featureIndex plus two.
+
+#Uses descriptive activity names to name the activities in the data set
+
+## load activity data into R
+
+## replace 1 to 6 with activity names
+
+# Appropriately labels the dataset with descriptive variable names.
+
+# From the data set in step 4, creates a second, independent tidy dataset with the average of each variable for each activity and each subject.
